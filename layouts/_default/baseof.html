@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="utf-8">
-    <title>XieDaijin's Blog</title>
+    {{ block "head" . }} {{ end }}
 </head>
 <body>
     {{ partial "header" . }}
-    <br>
     {{ block "main" . }} {{ end }}
-    <br>
     {{ partial "footer" . }}
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    {{ partial "head" . }}
+</head>
+<body>
+    {{ partial "header" . }}
+    <main>
+        <aside>
+            <div>
+                {{ partial "docs/menu" . }}
+            </div>
+        </aside>
+
+        <div>
+            {{ template "main" . }}
+        </div>
+
+        <aside>
+            <div>
+                {{ partial "toc" . }}
+            </div>
+        </aside>
+    </main>
+    {{ partial "footer" . }}
+</body>
+</html>

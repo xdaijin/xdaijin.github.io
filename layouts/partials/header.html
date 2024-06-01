@@ -1,8 +1,11 @@
 <header>
+    <div>
     <a href="/">Home</a>
     <nav>
         {{ range .Site.Menus.main }}
             <a href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
     </nav>
+    </div>
 </header>
+<hr/>
