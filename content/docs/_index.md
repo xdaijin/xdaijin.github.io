@@ -6,4 +6,4 @@ menus:
     weight: 2
     pageRef: '/docs'
 ---
-this doc landing page
+Here is XieDaijin's documents.

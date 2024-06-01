@@ -1,14 +1,10 @@
 <nav>
-    {{ $docsSection := default "docs" .Site.Params.docsSection  }}
-
     <div>
-    {{ with .Site.GetPage $docsSection }}
         <ul>
             {{ range .Pages }}
                 {{ template "menu-children" . }}
             {{ end }}
         </ul>
-    {{ end }}
     </div>
 </nav>
 
