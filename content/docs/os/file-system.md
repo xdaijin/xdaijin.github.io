@@ -1,1 +1,0 @@
-this page is about computer's file system
