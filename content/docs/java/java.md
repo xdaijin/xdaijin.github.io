@@ -17,20 +17,26 @@ volatile没有原子性，而锁没有禁止重排序功能
 ## synchronized
 特性: 原子，可见，有序，可重入，非公平
 
-实现原理(对象头，markword，monitor)
-经研究发现大部分时候加锁不一定会触发竞争，但每次加锁都去切换内核态很费时，所有设计了在各种情况下锁的实现方式
-* 无锁
-* 偏向锁：只有一个线程访问的时候(通过cas获取偏向锁)
-* 轻量级锁：当锁是偏向锁的时候来了另一个线程竞争，锁就升级成轻量级锁，新来的线程自旋等待，消耗cpu
-* 重量级锁：自旋多次失败后，锁升级为重量级锁
+实现原理(对象头，markword)
+markword由个2bit的锁标记位
+
+* 无锁（01）：markword记录hash值和分代年龄
+* 偏向锁（01）：比较threadid
+    只有一个线程去获取锁时，会将锁状态通过cas设置成偏向自己
+* 轻量级锁（00）：自旋
+    第二个线程看到已偏向，或者将偏向设置成自己失败后会当锁是偏向锁的时候来了另一个线程竞争，锁就升级成轻量级锁，新来的线程自旋等待，多次失败后升级成重量级锁
+* 重量级锁（10）：mutux
+    升级成重量级锁后会使用monitor对象，每个对象都有一个monitor对象，monitor对象记录了当前拥有对象的线程id，waitSet（在wait中的线程）和entryList（block等待锁的线程）,还有记录重入的次数
+* GC（11）
 
 ## LockSupport
 通过操作系统的pthread_cond_wait和pthread_cond_signal实现
 
 ## AbstractQueueSynchronizer
-通过cas，链表队列，LockSupport的park，unpark来实现
+核心cas，链表队列，state，exclusiveThread
 
-队列中的线程调用park，获得锁的线程退出时会unpark头节点
+通过cas将state由0设为1如果设置成功将exclusiveThread设置成当前线程，设置失败就将当前线程放入链表队列
+并调用LockSupport的park挂起。获得锁的线程退出时从队列中取出一个等待线程调用unpark
 
 ## reentranlock
 使用AbstractQueueSynchronizer(AQS)实现，支持公平锁和非公平锁
