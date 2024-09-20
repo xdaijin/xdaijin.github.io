@@ -51,6 +51,12 @@ AOT没用过
     refresh之后的一些逻辑，默认是空
 7.callRunners
 
+### Bean生命周期
+* 实例化
+* 属性赋值
+* 初始化
+* 销毁
+  
 ## SpringMVC
 ### 核心概念
 * DispatcherServlet
