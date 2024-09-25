@@ -49,7 +49,7 @@ Tel: 18516761018  Email: xdaijin@outlook.com
 为公司200+服务, 1000多台机器提供服务
 
 #### 链路追踪系统
-项目介绍: 基于日志rpcid和reqid的第一代链路追踪系统  
+项目介绍: 基于日志rpcid和reqid的第一代链路追踪系统   
 技术栈: java, springmvc, spark, hbase  
 主要工作:  
 1. 配置logagent收集soa日志，发送到kafka
@@ -59,9 +59,9 @@ Tel: 18516761018  Email: xdaijin@outlook.com
 5. 开发基于springmvc的数据查询web服务
 
 #### 分布式配置中心
-项目介绍: 基于开源方案apoll二次开发的分布式配置中心
-技术栈: java, springmvc, pg
-主要工作: 
+项目介绍: 基于开源方案apoll二次开发的分布式配置中心  
+技术栈: java, springmvc, pg  
+主要工作:  
 1. 数据库适配pg工作
 2. 接入公司单点登录功能
 3. 开发配置发布邮件通知功能
@@ -69,17 +69,17 @@ Tel: 18516761018  Email: xdaijin@outlook.com
 5. 服务部署接入发布系统适配工作s
 
 #### 骑行轨迹系统
-项目介绍: 提供骑行轨迹收集和查询功能的系统  
+项目介绍: 提供骑行轨迹收集和查询功能的系统   
 技术栈: java, kafka, hbase  
-主要工作: 
+主要工作:  
 1. rowkey设计, 订单号+时间逆序
 2. 消费kafka数据并将骑行轨迹写入hbase
 3. 通过scan实现骑行轨迹查询接口
 
 #### 海量数据收集系统
-项目介绍: 哈啰海量数据收集系统，日收集数据30TB，系统包含：服务器本地日志收集器LogAgent，插件式服务数据收集器            yukonLogger
-技术栈: java, disruptor, kafka
-主要工作: 
+项目介绍: 哈啰海量数据收集系统，日收集数据30TB，系统包含：服务器本地日志收集器LogAgent，插件式服务数据收集器yukonLogger
+技术栈: java, disruptor, kafka  
+主要工作:   
 1. 使用disruptor队列实现低延迟日志收集器
 2. 实现日志断点续传功能
 3. 通过通配符实现新日志自动识别并收集
