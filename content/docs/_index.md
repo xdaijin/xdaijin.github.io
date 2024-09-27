@@ -1,9 +1,19 @@
 ---
-title: 'Docs'
-menus:
-  main:
-    name: 'Docs'
-    weight: 2
-    pageRef: '/docs'
+title: Documentation
+next: first-page
+weight: 1
 ---
-Here is XieDaijin's documents.
+
+This is a demo of the theme's documentation layout.
+
+## Hello, World!
+
+```go {filename="main.go"}
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+```

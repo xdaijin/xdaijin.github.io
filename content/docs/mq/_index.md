@@ -1,13 +1,11 @@
 ---
-weight: 70
+title: 进阶篇 - 消息队列
+type: docs
+weight: 7
+prev: docs/first-page
+next: os
+sidebar:
+  open: false
 ---
-消息队列知识
 
-## 为什么用mq
-* 解偶
-* 异步
-* 削峰填谷
-
-## mq选型
-* rocketmq: 相比kafka功能丰富，响应及时，每秒能处理几十万条消息，适合在线业务
-* kafka: 适合日志消息，性能高，功能相对简单。当业务场景中的消息不是很多的时候，时延反而大，不适合在线业务场景
+Pages can be organized into folders.

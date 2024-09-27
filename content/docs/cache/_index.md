@@ -1,7 +1,7 @@
 ---
-title: 进阶篇 - 数据库
+title: 进阶篇 - 缓存
 type: docs
-weight: 5
+weight: 6
 prev: docs/first-page
 next: os
 sidebar:
