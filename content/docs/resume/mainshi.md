@@ -5,10 +5,7 @@
     2015年10月加入哈啰出行，前期做tcp连接模块和业务开发，后期在基础架构部门做分布式链路追踪系统开发，使用语言是java
 
 2.技术
-    在技术方面，我擅长java、redis，数据库，kafka，对es、hbase、clickhouse、spark、flink都有一定的使用经验
-
-3.优点
-    个人的优点是学习能力强，性格也很好相处，做事认真负责。
+    在技术方面，我擅长java、redis，数据库，kafka，对es、hbase、clickhouse、spark、flink都有一定的使用经验s
     
 以上就是我的一些基本情况
 
