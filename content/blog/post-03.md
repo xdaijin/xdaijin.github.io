@@ -1,5 +1,5 @@
 ---
-title: hugo
+title: vim
 type: blog
 weight: 1
 ---

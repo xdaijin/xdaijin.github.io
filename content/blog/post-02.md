@@ -1,5 +1,5 @@
 ---
-title: hugo
+title: git
 type: blog
 weight: 1
 ---

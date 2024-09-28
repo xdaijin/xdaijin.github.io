@@ -1,7 +1,9 @@
 ---
-title: 05 | 进阶篇 - 缓存
+title: 09 | 微服务 - 稳定性
 type: docs
-weight: 6
+weight: 9
+prev: docs/first-page
+next: os
 sidebar:
   open: false
 ---

@@ -1,7 +1,7 @@
 ---
-title: 05 | 进阶篇 - 缓存
+title: 10 | 分布式
 type: docs
-weight: 6
+weight: 10
 sidebar:
   open: false
 ---
