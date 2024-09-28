@@ -1,9 +1,9 @@
 ---
-title: 基础篇 - 语言
+title: 02 | 基础篇 - Java
 type: docs
 weight: 3
 sidebar:
-  open: true
+  open: false
 ---
 
 Pages can be organized into folders.

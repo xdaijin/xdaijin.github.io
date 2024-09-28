@@ -1,7 +1,7 @@
 ---
-title: 01 | 基础篇
+title: 06 | 进阶篇 - 数据库
 type: docs
-weight: 2
+weight: 8
 prev: docs/first-page
 next: os
 sidebar:
