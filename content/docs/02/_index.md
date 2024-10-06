@@ -1,5 +1,5 @@
 ---
-title: 02 | 基础篇 - Java
+title: 02 | 语言篇 - Java
 type: docs
 weight: 3
 sidebar:

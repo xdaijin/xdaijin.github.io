@@ -1,9 +1,7 @@
 ---
-title: 01 | 基础篇
+title: 06 | 消息队列
 type: docs
-weight: 2
-sidebar:
-  open: false
+weight: 7
 ---
-
+对比
 Pages can be organized into folders.
