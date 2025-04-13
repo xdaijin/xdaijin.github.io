@@ -1,0 +1,17 @@
+---
+title: 08 | 分布式
+type: docs
+weight: 10
+---
+
+## CAP
+
+## BASE
+
+## paxos
+
+## raft
+
+## zab
+
+## gossip

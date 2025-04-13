@@ -1,0 +1,274 @@
+{
+  "main": {
+    "id": "85685f8a34570feb",
+    "type": "split",
+    "children": [
+      {
+        "id": "a9fc5fd687e88fdb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4c536a3317c42022",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/_index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_index"
+            }
+          },
+          {
+            "id": "46f07d9f38ca4be4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "about.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "about"
+            }
+          },
+          {
+            "id": "5da698b5b330ed47",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "about.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "about"
+            }
+          },
+          {
+            "id": "d5c48ba45acfa6a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/IT.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "IT"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b5c2c01d48d4f168",
+    "type": "split",
+    "children": [
+      {
+        "id": "832cc0f838e47c6b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "976baf327ed0c55f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "1a77ac61b6cf1811",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "16d83d0f9a4d7b27",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "967fd5a86fa24623",
+    "type": "split",
+    "children": [
+      {
+        "id": "a65a3f49d773f5db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3ff6b2a6d6a45dc1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/java/TroublesShooting.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "TroublesShooting 的反向链接列表"
+            }
+          },
+          {
+            "id": "b001afc78ac48d9b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/java/TroublesShooting.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "TroublesShooting 的出链列表"
+            }
+          },
+          {
+            "id": "c913a9cbad1889e1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "1168f87c6a1b07a9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/java/TroublesShooting.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "TroublesShooting 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
+    }
+  },
+  "active": "d5c48ba45acfa6a3",
+  "lastOpenFiles": [
+    "未命名.canvas",
+    "docs/java/TroublesShooting.md",
+    "about.md",
+    "docs/mq/RocketMq.md",
+    "docs/mq/Kafka.md",
+    "docs/mq/_index.md",
+    "docs/java/Spring.md",
+    "docs/java/Mybatis.md",
+    "docs/java/Jvm.md",
+    "docs/java/Lang.md",
+    "blog/20241019-01.md",
+    "docs/cache/_index.md",
+    "docs/cache/Redis.md",
+    "docs/db/_index.md",
+    "docs/arch/MicroService.md",
+    "docs/arch/High.md",
+    "docs/arch/DistributionTheory.md",
+    "docs/IT.md",
+    "docs/db/MySql.md",
+    "docs/java/_index.md",
+    "docs/search/EleasticSearch.md",
+    "docs/stream/Flink.md",
+    "docs/util/Vim.md",
+    "docs/util/Maven.md",
+    "docs/util/Git.md",
+    "docs/util/Docker.md"
+  ]
+}
