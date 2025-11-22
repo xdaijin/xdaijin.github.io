@@ -29,7 +29,7 @@ timeFormat: "2006-01-02 15:04:05"
 author: Kyoo
 email: xdaijin@outlook.com
 description: "镜花水月"
-subtitle: "学无止境"
+subtitle: "学海无涯苦作舟"
 
 banner: "images/banner.webp"
 # You can also write it in the form of the following url
@@ -152,7 +152,7 @@ show_update_time: false # If you want to show the update time, please set this t
 
 # Summary content
 summary:
-  enable: false
+  enable: true
   style: 'subtitle' # 'subtitle' or 'blockquote'
 
 triangle_badge:

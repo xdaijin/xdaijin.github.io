@@ -1,6 +1,6 @@
 ---
 title: "Hugo操作指南"
-description: "这是一篇从初始化到构建发布过程的完整指导，如果需要了解hugo的概念，请阅读另一篇文件"
+summary: "这是一篇从初始化到构建发布过程的完整指导，如果需要了解hugo的概念，请阅读另一篇文件"
 keywords: "hugo"
 
 date: 2025-11-23T01:07:10+08:00
@@ -10,7 +10,7 @@ math: false
 mermaid: false
 
 categories:
-  - IT文档
+  - 前端
 tags:
   - hugo
 ---
