@@ -1,14 +1,13 @@
 ---
 title: Markdown Basic Elements
-description: 测试 Markdown 基本元素
+description: Markdown 基本元素
 
 date: 2025-06-09T20:12:52+08:00
 lastmod: 2025-06-09T20:12:52+08:00
 tags:
   - markdown
-  - test
 categories:
-  - test
+  - IT文档
 math: true
 mermaid: true
 photos:
@@ -506,6 +505,6 @@ $$ -->
 
 ## 卡片
 
-{{<postLinkCard path="/post/chinese" cover="auto" >}}
+{{<postLinkCard path="/post/hugo使用指南" cover="auto" >}}
 
 {{<externalLinkCard title="Github" link="https://github.com/D-Sketon/hugo-theme-reimu" cover="https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png">}}
