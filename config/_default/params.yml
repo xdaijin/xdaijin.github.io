@@ -389,10 +389,10 @@ giscus:
 ########################################
 
 algolia_search:
-  enable: false
-  appID:
-  apiKey:
-  indexName:
+  enable: true
+  appID: BXKH1R4XI1
+  apiKey: fb2ba486e900aebc445f0c0d3e74df80
+  indexName: github_pages
   hits:
     per_page: 10
 
