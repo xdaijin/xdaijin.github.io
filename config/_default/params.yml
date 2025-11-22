@@ -629,7 +629,7 @@ player:
   meting:
     # https://github.com/metowolf/MetingJS
     # if you want to use meting, please enable aplayer first
-    enable: false
+    enable: true
     meting_api: # custom api
     options:
       id: 2265921590
