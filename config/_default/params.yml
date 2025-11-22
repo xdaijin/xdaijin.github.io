@@ -14,9 +14,9 @@ menu:
   - name: about
     url: "about"
     icon:
-  - name: friend
-    url: "friend"
-    icon:
+  # - name: friend
+  #   url: "friend"
+  #   icon:
 
 mainSections: ["post"]
 # 年，月，日及时间的格式化样式
@@ -26,10 +26,10 @@ monthFormat: "2006-01"
 dateFormat: "2006-01-02"
 timeFormat: "2006-01-02 15:04:05"
 
-author: D-Sketon
-email: xxx@example.com
-description: "少女祈祷中..."
-subtitle: "少女祈祷中..."
+author: Kyoo
+email: xdaijin@outlook.com
+description: "镜花水月"
+subtitle: "学无止境"
 
 banner: "images/banner.webp"
 # You can also write it in the form of the following url
@@ -94,7 +94,7 @@ copyright:
 #   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></div>
 
 footer:
-  since: 2020 # 2020-current year
+  since: 2025 # 2020-current year
   powered: true
   count: true
   busuanzi: true
@@ -104,11 +104,11 @@ footer:
     mask: true # whether to use the images as a mask
 
 # Sidebar
-sidebar: right
+sidebar: left
 
 social:
-  # email: mailto:xxx@gmail.com
-  # github: https://github.com/yourname
+  email: mailto:xdaijin@outlook.com
+  github: https://github.com/xdaijin
   # google: https://plus.google.com/yourname
   # twitter: https://twitter.com/yourname
   # facebook: https://www.facebook.com/yourname
@@ -573,7 +573,7 @@ home_categories:
 
 # Experimental, may have a lot of bugs, open with caution!
 pjax:
-  enable: false
+  enable: true
 
 # Experimental
 # https://github.com/GoogleChromeLabs/quicklink
@@ -609,12 +609,12 @@ pace:
 # Experimental
 # Please turn on pjax to use this feature
 player:
-  disable_on_mobile: false
+  disable_on_mobile: true
   position: before_sidebar # before_sidebar | after_sidebar | after_widget
   # if you enable meting, you must enable aplayer first
   aplayer:
     # https://github.com/DIYgod/APlayer
-    enable: false
+    enable: true
     options:
       audio: []
       fixed: true
