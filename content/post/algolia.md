@@ -10,7 +10,7 @@ math: false
 mermaid: false
 
 categories:
-  - IT文档
+  - 前端
 tags:
   - algolia
 ---

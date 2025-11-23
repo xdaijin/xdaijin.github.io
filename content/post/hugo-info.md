@@ -2,6 +2,8 @@
 title: "Hugo基本概念和术语"
 summary: "这是一篇介绍hugo基本概念和术语的文章"
 keywords: "hugo基本概念和术语"
+sticky: true
+weight: 1
 
 date: 2025-11-23T02:49:50+08:00
 lastmod: 2025-11-23T02:49:50+08:00

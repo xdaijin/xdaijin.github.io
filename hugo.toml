@@ -34,3 +34,9 @@ notAlternative = true
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[permalinks]
+  [permalinks.page]
+    post = '/articles/:year:month/:filename/'
+  [permalinks.section]
+    post = '/articles/'
