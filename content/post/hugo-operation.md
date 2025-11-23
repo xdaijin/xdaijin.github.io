@@ -16,8 +16,10 @@ tags:
 ---
 
 ## 创建一个网站
+
 执行下面能够创建一个网站，并启动本地服务进行debug
-```
+
+```bash
 hugo new site my-site
 cd my-site
 git init
@@ -25,61 +27,81 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
 echo "theme = 'ananke'" >> hugo.toml
 hugo server
 ```
+
 ## 增加内容
+
 在content/posts目录下面增加一个page
-```
+
+```bash
 hugo new content content/posts/my-first-post.md
 ```
+
 文件的内容如下：
-```
+
+```text
 +++
 title = 'My First Post'
 date = 2024-01-14T07:07:07+01:00
 draft = true
 +++
 ```
+
 上面的page是草稿状态，草稿状态默认不会发布，如果需要在测试环境看到的话需要用下面的命令启动服务
-```
+
+```bash
 hugo server --buildDrafts
 或者
 hugo server -D
 ```
+
 文档编写好后吧draft设置成false
 
 ## 配置网站信息
+
 用编辑器打开项目根目录下的hugo.toml
-```
+
+```toml
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'ananke'
 ```
+
 修改以下配置：
+
 1. 修改baseURL成你实际发布的网站域名
 2. 设置语言编码
 3. 设置网站的title
 
 ## 发布网站
+
 执行命令生成网站的发布内容，生成的内容不包括草稿的、未来的、过期的文档
-```
+
+```bash
 hugo
 ```
 
 ## 使用github actions进行CI/CD
-#### 步骤1
+
+### 步骤1
+
 打开github项目，选择settings->pages，将Build and deployment改成GitHub Actions
 
-#### 步骤2
+### 步骤2
+
 修改hugo.toml配置文件，增加下面配置
-```
+
+```toml
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
 ```
 
-#### 步骤3
+### 步骤3
+
 在.github/worflows目录下增加hugo.toml
-```
+
+```toml
 name: Build and deploy
 on:
   push:
@@ -187,5 +209,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 ```
-#### 步骤4
+
+### 步骤4
+
 提交修改并推送到github，就会自动执行CI/CD
