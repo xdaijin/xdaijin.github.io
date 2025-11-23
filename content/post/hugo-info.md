@@ -17,8 +17,7 @@ tags:
   - hugo
 ---
 
-# hugo文件目录结构
-## 网站目录结构
+## 文件目录管理
 ```
 my-site/
 ├── archetypes/
@@ -69,7 +68,6 @@ my-site/
 └── themes/
 ```
 
-## 目录结构解析
 ##### archetypes
 用来管理生成content的模板，模板使用具有优先级，假如你执行下面的命令：
 ```
@@ -104,3 +102,32 @@ static下面的文件会在build的时候直接copy到public目录
 
 ##### themes
 主题文件
+
+## 内容管理
+TODO
+
+## URL管理
+hugo生成网站的时候，内容会安装下面格式输出：
+```
+url ("/posts/my-first-hugo-post/")
+                   ⊢------------^----------⊣
+       baseurl     section     slug
+⊢--------^--------⊣⊢-^--⊣⊢-------^---------⊣
+                 permalink
+⊢--------------------^---------------------⊣
+https://example.org/posts/my-first-hugo-post/index.html
+```
+
+###### section
+content下面带_index.md的子目录，/posts/my-first-hugo-post里面的posts
+
+###### slug
+路径的最后一段，可以在front matter里面配置，例如：
+```
++++
+slug = 'my-first-post'
+title = 'My First Post'
++++
+```
+
+
