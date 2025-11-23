@@ -71,7 +71,7 @@ my-site/
 └── themes/
 ```
 
-### archetypes
+**archetypes**  
 
 用来管理生成content的模板，模板使用具有优先级，假如你执行下面的命令：
 
@@ -86,35 +86,35 @@ hugo new content posts/my-first-post.md
 3. archetypes/default.md
 4. themes/my-theme/archetypes/default.md
 
-### assets
+**assets:**
 
 包括images, CSS, Sass, JavaScript, and TypeScript等全局资源，具体使用还待探究
 
-### config
+**config:**
 
 需要区分环境的配置放在这个目录下面，不需要区分环境的放在根目录的hugo.toml就行了
 
-### content
+**content:**
 
 博客的内容
 
-### data
+**data:**
 
 数据资源，包括json，toml，yaml，xml，csv等
 
-### i18n
+**i18n:**
 
 国际化配置
 
-### layouts
+**layouts:**
 
 包含用来转化content、data、resources成真正网站的模板
 
-### static
+**static:**
 
 static下面的文件会在build的时候直接copy到public目录
 
-### themes
+**themes:**
 
 主题文件
 
@@ -136,11 +136,11 @@ url ("/posts/my-first-hugo-post/")
 https://example.org/posts/my-first-hugo-post/index.html
 ```
 
-### section
+**section:**
 
 content下面带_index.md的子目录，/posts/my-first-hugo-post里面的posts
 
-### slug
+**slug:**
 
 路径的最后一段，可以在front matter里面配置，例如：
 

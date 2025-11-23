@@ -83,11 +83,11 @@ hugo
 
 ## 使用github actions进行CI/CD
 
-### 步骤1
+**步骤1:**
 
 打开github项目，选择settings->pages，将Build and deployment改成GitHub Actions
 
-### 步骤2
+**步骤2:**
 
 修改hugo.toml配置文件，增加下面配置
 
@@ -97,7 +97,7 @@ hugo
     dir = ':cacheDir/images'
 ```
 
-### 步骤3
+**步骤3:**
 
 在.github/worflows目录下增加hugo.toml
 
@@ -210,6 +210,6 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-### 步骤4
+**步骤4:**
 
 提交修改并推送到github，就会自动执行CI/CD
