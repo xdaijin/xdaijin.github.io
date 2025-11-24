@@ -7,7 +7,7 @@ lastmod: 2025-06-09T20:12:52+08:00
 tags:
   - markdown
 categories:
-  - 编辑语言
+  - 工具
 math: true
 mermaid: true
 photos:

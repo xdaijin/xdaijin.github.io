@@ -10,7 +10,7 @@ math: false
 mermaid: false
 
 categories:
-  - 工具类
+  - 工具
 tags:
   - git
 ---
