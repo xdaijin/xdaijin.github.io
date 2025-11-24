@@ -57,12 +57,6 @@ git diff
 git commit -m 
 ```
 
-### 显示某个提交详情
-
-```bash
-git show <commit-id> 
-```
-
 ## 日志篇
 
 ### 基本显示
@@ -83,6 +77,12 @@ git log --oneline
 
 ```bash
 git log --oneline --graph
+```
+
+### 显示某个提交详情
+
+```bash
+git show <commit-id> 
 ```
 
 ## 暂存区篇
@@ -155,12 +155,34 @@ git branch -r
 git branch -a
 ```
 
-### 切换分支
+### 本地分支基本操作
+
+切换：
 
 ```bash
 git switch <branch>
-或者创建新分支
-git switch -c <new-branch>
+或
+git checkout <branch>
+```
+
+创建：
+
+```bash
+git switch -c <branch>
+或
+git branch -b <branch>
+```
+
+删除：
+
+```bash
+git branch -d <branch>
+```
+
+重命名：
+
+```bash
+git branch -m <old_branch> <new_branch>
 ```
 
 ### 拉取
@@ -191,6 +213,48 @@ git pull origin master
 git push origin
 推送单个分支
 git push origin master
+```
+
+### 合并
+
+```bash
+git merge origin/master
+```
+
+如果有冲突，解决冲突后：
+
+```bash
+git add .
+git commit -m
+git merge --continue
+```
+
+如果解决不了冲突，选择放弃：
+
+```bash
+git merge --abort
+```
+
+### 变基
+
+只用于个人分支，推送个人分支前先用远程主分支做变基
+
+```bash
+git rebase origin/master
+```
+
+有个冲突解决冲突三连：
+
+```bash
+git add .
+git commit -m
+git rebase --continue
+```
+
+如果解决不了冲突，选择放弃：
+
+```bash
+git rebase --abort
 ```
 
 ### 远程分支基本操作
