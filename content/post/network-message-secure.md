@@ -146,7 +146,7 @@ TLS是SSL的后继版本，ssl分为1.0，2.0，3.0，目前都已弃用。tls�
 
 https和http比就是在tcp上面加了一层tls加密，这样在网络上传输的数据就不会被窃听
 
-![http和https的区别](images/http_https.png)
+![http和https的区别](/images/http_https.png)
 
 ## CA证书
 
