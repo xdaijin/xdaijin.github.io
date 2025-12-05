@@ -79,13 +79,15 @@ jcmd <pid> GC.heap_dump -all <filename>
 
 使用visualvm分析dump文件
 
-查看堆内内存和jvm使用的堆外内存(需要加启动参数-XX:NativeMemoryTracking=detail)：
+### 查看堆内内存和jvm使用的堆外内存
+
+需要加启动参数-XX:NativeMemoryTracking=detail
 
 ```bash
 jcmd <pid> VM.native_memory detail scale=mb
 ```
 
-查看所有jvm内存：
+### 查看所有jvm内存
 
 ```bash
 pmap -x <pid>
