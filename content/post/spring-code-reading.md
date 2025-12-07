@@ -1,7 +1,7 @@
 ---
-title: "Spring源码解析"
-summary: "这篇文章介绍了spring源码的解析"
-keywords: "spring,code,reading"
+title: "Spring框架解析"
+summary: "这篇文章介绍了spring框架的使用内容"
+keywords: "spring"
 
 date: 2025-12-07T22:56:38+08:00
 lastmod: 2025-12-07T22:56:38+08:00
@@ -10,12 +10,18 @@ math: false
 mermaid: false
 
 categories:
-  - spring
+  - java
 tags:
   - spring
 ---
 
-## sping类的两种主要加载机制
+## spring
+
+### aop
+
+## spring boot
+
+### sping类的两种主要加载机制
 
 1. spring bean
     - 注解
@@ -53,9 +59,9 @@ tags:
     - ApplicationListener
     - SpringApplicationRunListener
 
-## spring boot启动过程
+### spring boot应用启动过程
 
-### 主要阶段
+#### 主要阶段
 
 SpringApplicationRunListener类明确标出了spring应用启动的过程：
 
@@ -70,7 +76,7 @@ SpringApplicationRunListener类明确标出了spring应用启动的过程：
 
 1. failed
 
-### 核心代码
+#### 核心代码
 
 org.springframework.boot.SpringApplication类的run方法：
 
@@ -119,7 +125,7 @@ org.springframework.boot.SpringApplication类的run方法：
     }
 ```
 
-#### 构造SpringApplication
+##### 构造SpringApplication
 
 通过SpringFactoriesLoader加载下面初始化器：
 
@@ -127,39 +133,39 @@ org.springframework.boot.SpringApplication类的run方法：
 - ApplicationContextInitializer 应用上下文初始化器
 - ApplicationListener 事件监听器
 
-#### 初始化启动上下文
+##### 初始化启动上下文
 
 通过BootstrapRegistryInitializer来初始化启动上下文
 
 触发事件starting
 
-#### 解析应用配置
+##### 解析应用配置
 
 通过prepareEnvironment方法解析应用配置
 
 触发事件environmentPrepared
 
-#### 创建并初始化上下文
+##### 创建并初始化上下文
 
 创建上下文并调用ApplicationContextInitializer来初始化
 
 触发事件contextPrepared和contextLoaded
 
-#### 刷新上下文
+##### 刷新上下文
 
 调用AbstractApplicationContext的refresh方法刷新上下文
 
 触发事件contextRefreshed和started
 
-#### 最后阶段
+##### 最后阶段
 
 同步执行所有runner
 
 触发事件ready
 
-## spring bean生命周期
+### bean生命周期
 
-## spring web解析
+## spring web
 
 ### web三个组件
 
