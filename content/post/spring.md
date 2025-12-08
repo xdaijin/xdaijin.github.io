@@ -67,6 +67,7 @@ SpringApplicationRunListener类明确标出了spring应用启动的状态阶段�
 
 ```mermaid
   stateDiagram-v2
+    direction LR
     [*] --> starting
     starting --> environmentPrepared
     environmentPrepared --> contextPrepared
