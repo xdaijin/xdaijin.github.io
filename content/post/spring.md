@@ -1,13 +1,13 @@
 ---
-title: "Spring框架解析"
-summary: "这篇文章介绍了spring框架的使用内容"
+title: "Spring笔记"
+summary: "这篇文章介绍了spring相关的知识"
 keywords: "spring"
 
 date: 2025-12-07T22:56:38+08:00
 lastmod: 2025-12-07T22:56:38+08:00
 
 math: false
-mermaid: false
+mermaid: true
 
 categories:
   - java
@@ -21,7 +21,7 @@ tags:
 
 ## spring boot
 
-### sping类的两种主要加载机制
+### 加载类的两种方式
 
 1. spring bean
     - 注解
@@ -61,20 +61,25 @@ tags:
 
 ### spring boot应用启动过程
 
-#### 主要阶段
+#### 状态图
 
-SpringApplicationRunListener类明确标出了spring应用启动的过程：
+SpringApplicationRunListener类明确标出了spring应用启动的状态阶段：
 
-1. starting
-2. environmentPrepared
-3. contextPrepared
-4. contextLoaded
-5. started
-6. ready
-
-还有一个异常阶段：
-
-1. failed
+```mermaid
+  stateDiagram-v2
+    [*] --> starting
+    starting --> environmentPrepared
+    environmentPrepared --> contextPrepared
+    environmentPrepared --> failed
+    contextPrepared --> contextLoaded
+    contextPrepared --> failed
+    contextLoaded --> started
+    contextLoaded --> failed
+    started --> ready
+    started --> failed
+    failed --> [*]
+    ready --> [*]
+```
 
 #### 核心代码
 
@@ -213,6 +218,20 @@ org.springframework.boot.SpringApplication类的run方法：
     public class MyThirdServletListener implements ServletContextListener {}
     ```
 
+### 序列图
+
+一个http请求执行的序列图：
+
+```mermaid
+  sequenceDiagram
+    Tomcat->>+ApplicationFilterChain: doFilter
+    ApplicationFilterChain->>+Filter: doFilter
+    Filter->>+DispatcherServlet: doService
+    DispatcherServlet-->>-Filter: Void
+    Filter-->>-ApplicationFilterChain: Void
+    ApplicationFilterChain-->>-Tomcat: HttpServletResponse
+```
+
 ### 核心类DispatcherServlet
 
 实际上是一个HttpServlet，绑定了路径`/`，由DispatcherServletAutoConfiguration类配置
@@ -291,3 +310,12 @@ protected void doDispatch(HttpServletRequest request, HttpServletResponse respon
   }
 }
 ```
+
+### 自定义配置类WebMvcConfigurer
+
+常用配置项：
+
+- addInterceptors 配置拦截器
+- addCorsMappings 配置跨域
+- configureMessageConverters 配置body解析器
+- getValidator 配置校验器
