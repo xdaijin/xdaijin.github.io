@@ -131,6 +131,104 @@ org.springframework.boot.SpringApplication类的run方法：
     }
 ```
 
+#### bean的加载过程
+
+web项目会用ServletWebServerApplicationContextFactory创建出AnnotationConfigServletWebServerApplicationContext
+
+AnnotationConfigServletWebServerApplicationContext使用ClassPathBeanDefinitionScanner来扫描类，然后用AnnotatedBeanDefinitionReader来读取注解类型的bean并注册到beanFactory中
+
+然后执行AbstractApplicationContext的refresh方法：
+
+```JAVA
+    public void refresh() throws BeansException, IllegalStateException {
+      this.startupShutdownLock.lock();
+      try {
+        this.startupShutdownThread = Thread.currentThread();
+
+        StartupStep contextRefresh = this.applicationStartup.start("spring.context.refresh");
+
+        // Prepare this context for refreshing.
+        prepareRefresh();
+
+        // Tell the subclass to refresh the internal bean factory.
+        ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
+
+        // Prepare the bean factory for use in this context.
+        prepareBeanFactory(beanFactory);
+
+        try {
+          // Allows post-processing of the bean factory in context subclasses.
+          postProcessBeanFactory(beanFactory);
+
+          StartupStep beanPostProcess = this.applicationStartup.start("spring.context.beans.post-process");
+          // Invoke factory processors registered as beans in the context.
+          invokeBeanFactoryPostProcessors(beanFactory);
+          // Register bean processors that intercept bean creation.
+          registerBeanPostProcessors(beanFactory);
+          beanPostProcess.end();
+
+          // Initialize message source for this context.
+          initMessageSource();
+
+          // Initialize event multicaster for this context.
+          initApplicationEventMulticaster();
+
+          // Initialize other special beans in specific context subclasses.
+          onRefresh();
+
+          // Check for listener beans and register them.
+          registerListeners();
+
+          // Instantiate all remaining (non-lazy-init) singletons.
+          finishBeanFactoryInitialization(beanFactory);
+
+          // Last step: publish corresponding event.
+          finishRefresh();
+        }
+
+        catch (RuntimeException | Error ex ) {
+          if (logger.isWarnEnabled()) {
+            logger.warn("Exception encountered during context initialization - " +
+                "cancelling refresh attempt: " + ex);
+          }
+
+          // Destroy already created singletons to avoid dangling resources.
+          destroyBeans();
+
+          // Reset 'active' flag.
+          cancelRefresh(ex);
+
+          // Propagate exception to caller.
+          throw ex;
+        }
+
+        finally {
+          contextRefresh.end();
+        }
+      }
+      finally {
+        this.startupShutdownThread = null;
+        this.startupShutdownLock.unlock();
+      }
+    }
+```
+
+refresh方法生成bean的流程图：
+
+```mermaid
+sequenceDiagram
+    SpringApplication->>+AbstractApplicationContext: refresh
+    AbstractApplicationContext->>+AbstractApplicationContext: finishBeanFactoryInitialization
+    AbstractApplicationContext->>+DefaultListableBeanFactory: preInstantiateSingletons
+    loop
+        DefaultListableBeanFactory->>+DefaultListableBeanFactory: getSingleton
+    end
+    DefaultListableBeanFactory-->>-AbstractApplicationContext: 
+    AbstractApplicationContext-->>-SpringApplication: 
+```
+
+getSingleton最后会调用AbstractBeanFactory的doGetBean方法，doGetBean会先遍历自己依赖的bean，并检查依赖的bean是否依赖自己（就是检查循环依赖，默认如果出现循环依赖就抛出循环依赖异常），如果不依赖自己就先获取依赖的bean，就是先初始化自己依赖的bean
+
 ##### 构造SpringApplication
 
 通过SpringFactoriesLoader加载下面初始化器：
