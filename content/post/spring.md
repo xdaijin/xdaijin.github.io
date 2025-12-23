@@ -131,6 +131,44 @@ org.springframework.boot.SpringApplication类的run方法：
     }
 ```
 
+##### 构造SpringApplication
+
+通过SpringFactoriesLoader加载下面初始化器：
+
+- BootstrapRegistryInitializer 用来初始化启动上下文
+- ApplicationContextInitializer 应用上下文初始化器
+- ApplicationListener 事件监听器
+
+##### 初始化启动上下文
+
+通过BootstrapRegistryInitializer来初始化启动上下文
+
+触发事件starting
+
+##### 解析应用配置
+
+通过prepareEnvironment方法解析应用配置
+
+触发事件environmentPrepared
+
+##### 创建并初始化上下文
+
+创建上下文并调用ApplicationContextInitializer来初始化
+
+触发事件contextPrepared和contextLoaded
+
+##### 刷新上下文
+
+调用AbstractApplicationContext的refresh方法刷新上下文
+
+触发事件contextRefreshed和started
+
+##### 最后阶段
+
+同步执行所有runner
+
+触发事件ready
+
 #### bean的加载过程
 
 web项目会用ServletWebServerApplicationContextFactory创建出AnnotationConfigServletWebServerApplicationContext
@@ -228,44 +266,6 @@ sequenceDiagram
 ```
 
 getSingleton最后会调用AbstractBeanFactory的doGetBean方法，doGetBean会先遍历自己依赖的bean，并检查依赖的bean是否依赖自己（就是检查循环依赖，默认如果出现循环依赖就抛出循环依赖异常），如果不依赖自己就先获取依赖的bean，就是先初始化自己依赖的bean
-
-##### 构造SpringApplication
-
-通过SpringFactoriesLoader加载下面初始化器：
-
-- BootstrapRegistryInitializer 用来初始化启动上下文
-- ApplicationContextInitializer 应用上下文初始化器
-- ApplicationListener 事件监听器
-
-##### 初始化启动上下文
-
-通过BootstrapRegistryInitializer来初始化启动上下文
-
-触发事件starting
-
-##### 解析应用配置
-
-通过prepareEnvironment方法解析应用配置
-
-触发事件environmentPrepared
-
-##### 创建并初始化上下文
-
-创建上下文并调用ApplicationContextInitializer来初始化
-
-触发事件contextPrepared和contextLoaded
-
-##### 刷新上下文
-
-调用AbstractApplicationContext的refresh方法刷新上下文
-
-触发事件contextRefreshed和started
-
-##### 最后阶段
-
-同步执行所有runner
-
-触发事件ready
 
 ### bean生命周期
 
