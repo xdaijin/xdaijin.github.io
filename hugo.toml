@@ -37,6 +37,6 @@ notAlternative = true
 
 [permalinks]
   [permalinks.page]
-    post = '/articles/:year:month/:filename/'
+    post = '/articles/:year:month/:contentbasename/'
   [permalinks.section]
     post = '/articles/'
